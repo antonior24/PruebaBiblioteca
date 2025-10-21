@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from biblioteca.models import Libro
 from django.db.models import Q
+from django.views.defaults import page_not_found
 
 # Create your views here.
 def index(request):
@@ -51,5 +52,8 @@ def dame_libros_idioma(request, idioma):
     [idioma]))
 
     return render(request, 'libro/lista.html', {"libros_mostrar": libros})
+
+def error_404_view(request, exception=None):
+    return render(request, 'errores/404.html' , None, None , 404)
 
 
