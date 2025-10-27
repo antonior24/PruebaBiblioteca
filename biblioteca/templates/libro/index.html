@@ -1,11 +1,10 @@
 <html>
-    <head></head>
-    <body>
-        <h1>BIBLIOTECA ONLINE</h1>
+    {% extends "libro/principal.html" %}
+    
+    {% block content %}
 
         <h2>Listado de enlaces</h2>
         <ul>
             <li><a href="{% url 'lista_libros' %}">Libros</a></li>
         </ul>
-    </body>
-</html>
+    {% endblock content %}

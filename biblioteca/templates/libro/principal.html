@@ -1,0 +1,16 @@
+<html>
+    {% load static %}
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" >
+    <script src="{% static 'javascript/tutorial.js' %}"></script>
+</head>
+<body>
+    <h1>Esto es una plantilla</h1>
+    <img src="{% static "imagenes/imagen.png" %}" alt="">
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
